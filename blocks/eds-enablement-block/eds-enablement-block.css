@@ -1,24 +1,67 @@
 .eds-enablement-block {
-  border: 2px solid currentcolor;
-  border-radius: 8px;
-  padding: 16px;
+  overflow: hidden;
+  border-radius: 16px;
+  background: linear-gradient(135deg, #1b2a4a, #3b1d6e);
+  color: #fff;
+  box-shadow: 0 8px 24px rgb(0 0 0 / 25%);
 }
 
 .eds-enablement-block .eds-enablement-block-row {
   display: flex;
   flex-direction: column;
-  gap: 16px;
 }
 
+.eds-enablement-block .eds-enablement-block-text {
+  padding: 24px;
+}
+
+.eds-enablement-block .eds-enablement-block-badge {
+  display: inline-block;
+  margin-bottom: 12px;
+  border-radius: 999px;
+  padding: 4px 12px;
+  background-color: #ffc83d;
+  color: #1b2a4a;
+  font-size: var(--body-font-size-xs);
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+.eds-enablement-block .eds-enablement-block-text h1,
+.eds-enablement-block .eds-enablement-block-text h2,
+.eds-enablement-block .eds-enablement-block-text h3 {
+  margin: 0 0 12px;
+  color: #fff;
+}
+
+.eds-enablement-block .eds-enablement-block-text p {
+  margin: 0 0 16px;
+}
+
+.eds-enablement-block .eds-enablement-block-text a.button {
+  display: inline-block;
+  margin: 0;
+  border: 2px solid #ffc83d;
+  border-radius: 999px;
+  padding: 8px 24px;
+  background-color: #ffc83d;
+  color: #1b2a4a;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.eds-enablement-block .eds-enablement-block-text a.button:hover {
+  background-color: transparent;
+  color: #ffc83d;
+}
+
+.eds-enablement-block .eds-enablement-block-image picture,
 .eds-enablement-block .eds-enablement-block-image img {
   display: block;
   width: 100%;
-  height: auto;
-  border-radius: 4px;
-}
-
-.eds-enablement-block.session-two {
-  background-color: var(--light-color);
+  height: 100%;
+  object-fit: cover;
 }
 
 .eds-enablement-block.session-practice .eds-enablement-block-text {
@@ -28,10 +71,15 @@
 @media (width >= 900px) {
   .eds-enablement-block .eds-enablement-block-row {
     flex-direction: row;
-    align-items: center;
+    align-items: stretch;
   }
 
   .eds-enablement-block .eds-enablement-block-row > div {
     flex: 1;
+  }
+
+  .eds-enablement-block .eds-enablement-block-text {
+    align-self: center;
+    padding: 40px;
   }
 }
