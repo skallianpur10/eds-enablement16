@@ -1,0 +1,37 @@
+.eds-enablement-block {
+  border: 2px solid currentcolor;
+  border-radius: 8px;
+  padding: 16px;
+}
+
+.eds-enablement-block .eds-enablement-block-row {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.eds-enablement-block .eds-enablement-block-image img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 4px;
+}
+
+.eds-enablement-block.session-two {
+  background-color: var(--light-color);
+}
+
+.eds-enablement-block.session-practice .eds-enablement-block-text {
+  font-weight: 500;
+}
+
+@media (width >= 900px) {
+  .eds-enablement-block .eds-enablement-block-row {
+    flex-direction: row;
+    align-items: center;
+  }
+
+  .eds-enablement-block .eds-enablement-block-row > div {
+    flex: 1;
+  }
+}
